@@ -1,0 +1,89 @@
+[
+  {
+    "parts": [
+      { "question": "If you did a bonus task what did you do?", "answer": "" },
+      { "question": "What were your results?", "answer": "HELLO JACKSOn" },
+      { "question": "Does this match the expected outcome?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Explain the difference between MonoBERT and DuoBERT.", "answer": "" },
+      { "question": "Why isn’t MonoBERT alone sufficient?", "answer": "" },
+      { "question": "What does DuoBERT add, and how does it use pairs?", "answer": "" },
+      { "question": "When would you prefer one over the other?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Compare BM25 and DPR.", "answer": "" },
+      { "question": "Why might BM25 outperform DPR sometimes?", "answer": "" },
+      { "question": "How does DPR handle negatives?", "answer": "" },
+      { "question": "Which model handles rare terms better and why?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "What is the core difference between TILDE and SPLADE?", "answer": "" },
+      { "question": "How does each generate sparse representations?", "answer": "" },
+      { "question": "Which one uses MLM predictions, and why?", "answer": "" },
+      { "question": "Why is SPLADE considered more expressive?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "What improvements does ANCE make over DPR?", "answer": "" },
+      { "question": "Why are static BM25 negatives a problem?", "answer": "" },
+      { "question": "How do ANCE checkpoint negatives help?", "answer": "" },
+      { "question": "What is the downside of this approach?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Why are decoder-only LLMs now being used as embedding models?", "answer": "" },
+      { "question": "How do they represent full sentences despite being autoregressive?", "answer": "" },
+      { "question": "What architectural trick does E5 or LLM2Vec use?", "answer": "" },
+      { "question": "What are the trade-offs vs. encoder models?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Explain how ColBERT differs from DPR.", "answer": "" },
+      { "question": "Why is ColBERT multi-vector?", "answer": "" },
+      { "question": "How does MaxSim aggregation work?", "answer": "" },
+      { "question": "When is ColBERT a poor choice?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Explain PageRank without using formulas.", "answer": "" },
+      { "question": "Why do we need teleportation?", "answer": "" },
+      { "question": "What gives a page a high score?", "answer": "" },
+      { "question": "How would you combine PageRank with lexical or neural ranking?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Explain Rocchio relevance feedback.", "answer": "" },
+      { "question": "How does it shift the query embedding?", "answer": "" },
+      { "question": "When can Rocchio harm performance?", "answer": "" },
+      { "question": "What assumption does pseudo-RF make?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Outline how a modern RAG pipeline works.", "answer": "" },
+      { "question": "Why is query rewriting needed?", "answer": "" },
+      { "question": "Why is reranking important?", "answer": "" },
+      { "question": "What problem does BlendFilter try to solve?", "answer": "" }
+    ]
+  },
+  {
+    "parts": [
+      { "question": "Explain the differences between pointwise, pairwise, and listwise LTR.", "answer": "" },
+      { "question": "Which aligns best with NDCG?", "answer": "" },
+      { "question": "Why is listwise harder to optimize?", "answer": "" },
+      { "question": "What bias does IPS correct?", "answer": "" }
+    ]
+  }
+]
