@@ -28,7 +28,6 @@ What is masked attention?,Decoder sees only previous tokens.,transformers
 What is an encoder?,Bidirectional contextual representation generator.,transformers
 What is a decoder?,Autoregressive generator of tokens.,transformers
 What is BERT?,Encoder-only transformer.,transformers
-What is GPT?,Decoder-only transformer.,transformers
 What is TF?,Term frequency within a document.,lexical_models
 What is DF?,Number of documents containing a term.,lexical_models
 What is IDF?,Weights rare terms higher: log(N/df).,lexical_models
@@ -50,7 +49,6 @@ What is cosine similarity?,Dot product of normalised vectors.,dense_retrievers
 Why normalise vectors?,Ensure cosine similarity is meaningful.,dense_retrievers
 What is ANN?,Approximate nearest neighbor search.,dense_retrievers
 What is FAISS?,Library for fast ANN search.,dense_retrievers
-What is vector quantisation?,Compression of embeddings.,dense_retrievers
 What is DPR?,Dual-encoder retriever using CLS embeddings.,dense_retrievers
 What loss does DPR use?,InfoNCE contrastive loss.,dense_retrievers
 What is RepBERT?,Mean-pooling retriever.,dense_retrievers
