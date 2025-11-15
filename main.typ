@@ -1,22 +1,17 @@
-#import "lib.typ": *
-#align(center)[
-  #set text(size: 30pt)
-  INFS7410 - Oral Practice Exam \
-  #set text(size: 12pt)
-  By T & J
-
-  #emph("Realistic Oral-Exam Style Questions + Follow-Ups")
+#outline() 
+#show heading: it => block(width: 100%)[
+  #set text(weight: "regular")
+  #(it.body)
 ]
+// Interested in helping out?
+// Click the button on the sidebar called "Files"
+// and take a look at cards.csv and use the comments feature in Typst (on the bar with Bold, Italics, it is the last element (on hover says add comment)) or use Edstem
+// This document isn't finished, so input would be appreciated!
 
-#set page(numbering: "1")
-
-#let data = json("questionAnswers.json")
-
+= Flashcards
+See next page
+#include "cards.typ"
 #pagebreak()
-
-#for (questionParts) in data [
-  #question()
-  #for part in questionParts.parts [
-    #questionPart(part.question)
-  ]
-]
+#include "unanswered.typ"
+#pagebreak()
+#include "answered.typ"

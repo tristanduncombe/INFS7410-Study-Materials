@@ -48,8 +48,6 @@ What is query term independence?,Assumes term contributions are independent.,lex
 What is BM25?,"Ranking based on TF, IDF, and length normalization.",lexical_models
 What does k1 control?,Term frequency saturation.,lexical_models
 What does b control?,Document length normalization.,lexical_models
-What is BM25+?,Adds delta to reduce short doc bias.,lexical_models
-What is BM25L?,Smoothing TF for long docs.,lexical_models
 What are dense retrievers?,Embed queries/documents for semantic similarity search.,dense_retrievers
 Why dense retrievers?,Capture semantic similarity beyond lexical overlap.,dense_retrievers
 What is contrastive learning?,"Bring positives closer, push negatives apart.",dense_retrievers

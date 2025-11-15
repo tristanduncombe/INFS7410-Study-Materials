@@ -1,14 +1,11 @@
 #import "lib.typ": *
-#reset()
 #align(center)[
   #set text(size: 20pt)
-  = INFS7410 - Oral Practice Exam Answers
+  = INFS7410 - Oral Practice Exam
   #set text(size: 12pt)
   By T & J
 
   #emph("Realistic Oral-Exam Style Questions + Follow-Ups")
-
-  #emph("This is not complete and is still in progress")
 ]
 
 #set page(numbering: "1")
@@ -20,6 +17,6 @@
 #for (questionParts) in data [
   #question()
   #for part in questionParts.parts [
-    #questionPart(part.question, part.answer)
+    #questionPart(part.question)
   ]
 ]
