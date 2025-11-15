@@ -1,1 +1,173 @@
-a
+What affects importance of document parts?,"Headings, anchor text, bold text, metadata, links.",basics
+What is relevance?,How well a document matches a user's information need.,basics
+What is precision?,Relevant retrieved / retrieved.,basics
+What is recall?,Relevant retrieved / relevant.,basics
+What is the precision–recall tradeoff?,Higher recall reduces precision and vice versa.,basics
+What is MAP?,Mean Average Precision across all query average precisions.,basics
+What is nDCG?,Normalized DCG measuring ranked relevance.,basics
+What is a relevance judgment?,Human labeling of document relevance.,basics
+What is pooling?,Technique used in IR evaluation to gather candidate relevant docs.,basics
+What is Zipf’s Law?,Rank × frequency ≈ constant.,indexing
+Why ignore common words?,They do not discriminate documents.,indexing
+Why ignore rare words?,Often typos or noise.,indexing
+What is tokenization?,Splitting text into tokens.,indexing
+What is stopword removal?,Deleting high-frequency function words.,indexing
+What is stemming?,Reducing words to their root form.,indexing
+What is lemmatization?,Dictionary-based reduction to root.,indexing
+Difference between stemming and lemmatization?,Stemming is heuristic; lemmatization uses grammar.,indexing
+What is an inverted index?,Term → list of docIDs.,indexing
+What is a posting?,Item containing docID + optional frequency or positions.,indexing
+What is a skip pointer?,Shortcut pointer within a posting list.,indexing
+What is positional indexing?,Storing term positions for phrase search.,indexing
+What is a phrase query?,Query requiring exact word sequence match.,indexing
+What is a biword index?,Index over word pairs.,indexing
+What is a K-gram index?,Index over substrings of size K.,indexing
+Why use K-gram indexes?,Enable wildcard searching.,indexing
+What is self-attention?,Mechanism where each token attends to all others.,transformers
+"What are Q, K, V?","Query, Key, Value vectors used in attention.",transformers
+Attention formula?,softmax(QK^T / sqrt(d)) V.,transformers
+What is multi-head attention?,Parallel attention operations capturing different patterns.,transformers
+Why positional encodings?,Transformers lack sequence order awareness.,transformers
+What are sinusoidal encodings?,Fixed encodings using sine/cosine functions.,transformers
+What are relative position encodings?,Encode relative distances between tokens.,transformers
+What is layer normalization?,Stabilizes training by normalizing activations.,transformers
+What is a feed-forward network?,Two linear layers with activation.,transformers
+What is masked attention?,Decoder sees only previous tokens.,transformers
+What is an encoder?,Bidirectional contextual representation generator.,transformers
+What is a decoder?,Autoregressive generator of tokens.,transformers
+What is BERT?,Encoder-only transformer.,transformers
+What is GPT?,Decoder-only transformer.,transformers
+Why transformers outperform RNNs?,Parallelizable and capture long-range dependencies.,transformers
+What is TF?,Term frequency within a document.,lexical_models
+What is DF?,Number of documents containing a term.,lexical_models
+What is IDF?,Weights rare terms higher: log(N/df).,lexical_models
+What is TF-IDF?,TF × IDF weighting scheme.,lexical_models
+Why TF-IDF?,"Downweights common terms, upweights rare ones.",lexical_models
+What is probabilistic relevance framework?,Ranking based on probability of relevance.,lexical_models
+What is query term independence?,Assumes term contributions are independent.,lexical_models
+What is BM25?,"Ranking based on TF, IDF, and length normalization.",lexical_models
+What does k1 control?,Term frequency saturation.,lexical_models
+What does b control?,Document length normalization.,lexical_models
+What is BM25+?,Adds delta to reduce short doc bias.,lexical_models
+What is BM25L?,Smoothing TF for long docs.,lexical_models
+What are dense retrievers?,Embed queries/documents for semantic similarity search.,dense_retrievers
+Why dense retrievers?,Capture semantic similarity beyond lexical overlap.,dense_retrievers
+What is contrastive learning?,"Bring positives closer, push negatives apart.",dense_retrievers
+What are positive pairs?,Query and relevant document.,dense_retrievers
+What are hard negatives?,Documents similar to positive but irrelevant.,dense_retrievers
+Why hard negatives?,Improve fine-grained discrimination.,dense_retrievers
+What is in-batch negatives?,Use batch samples as negatives.,dense_retrievers
+What is cosine similarity?,Dot product of normalized vectors.,dense_retrievers
+Why normalize vectors?,Ensure cosine similarity is meaningful.,dense_retrievers
+What is ANN?,Approximate nearest neighbor search.,dense_retrievers
+What is FAISS?,Library for fast ANN search.,dense_retrievers
+What is HNSW?,Graph-based ANN structure.,dense_retrievers
+What is vector quantization?,Compression of embeddings.,dense_retrievers
+What is DPR?,Dual-encoder retriever using CLS embeddings.,dense_retrievers
+What loss does DPR use?,InfoNCE contrastive loss.,dense_retrievers
+What is RepBERT?,Mean-pooling retriever.,dense_retrievers
+What is Contriever?,Unsupervised dense retriever.,dense_retrievers
+What is ColBERT?,Multi-vector late interaction model.,dense_retrievers
+Why rerank?,Improve ranking quality after initial retrieval.,rerankers
+What is pointwise LTR?,Predict score per document.,rerankers
+What is pairwise LTR?,Learn document preferences.,rerankers
+What is listwise LTR?,Optimize metrics over whole ranking.,rerankers
+Example pointwise model?,Regression-based scoring.,rerankers
+Example pairwise model?,RankNet.,rerankers
+Example listwise model?,"ListNet, LambdaRank.",rerankers
+What is LambdaMART?,Boosted trees optimizing ranking.,rerankers
+What is cross-encoder?,Jointly encode query and document.,rerankers
+Why cross-encoders strong?,Model token interactions across input.,rerankers
+Why cross-encoders expensive?,Require full forward pass per pair.,rerankers
+What is monoBERT?,Cross-encoder reranker.,rerankers
+What is duoBERT?,Pairwise reranker.,rerankers
+Why generative IR?,"LLMs generate answers, not just rank documents.",generative_ir
+What is RAG?,Retriever + generator hybrid.,generative_ir
+How does RAG reduce hallucination?,Provides grounding documents.,generative_ir
+What is evidence-conditioned decoding?,Decoder attends to retrieved docs.,generative_ir
+What is zero-shot?,No examples given.,generative_ir
+What is one-shot?,One example given.,generative_ir
+What is few-shot?,Multiple examples given.,generative_ir
+What is chain-of-thought prompting?,Encourages reasoning steps.,generative_ir
+What is latent retrieval?,Model learns to retrieve implicitly.,generative_ir
+What is explicit retrieval?,Separate retriever model.,generative_ir
+Why chunk documents?,Fit LLM context window.,generative_ir
+What is context window?,Maximum number of tokens model can attend to.,generative_ir
+What is anchor text?,Clickable text giving document context.,hyperlink_info
+Why anchor text useful?,Often summarizes target page.,hyperlink_info
+What is PageRank?,Importance based on inbound links.,hyperlink_info
+What is damping factor?,Probability of link-following (≈0.85).,hyperlink_info
+What is teleportation?,Random jump avoiding dead ends.,hyperlink_info
+What is a dangling node?,Page with no outbound links.,hyperlink_info
+What is HITS algorithm?,Computes hub and authority scores.,hyperlink_info
+What is link analysis?,Using hyperlink structure for ranking.,hyperlink_info
+What is MMR?,Diversification balancing relevance and novelty.,hyperlink_info
+What is explicit feedback?,User marks relevance.,relevance_feedback
+What is implicit feedback?,Behavior-based relevance signals.,relevance_feedback
+Why implicit feedback noisy?,Clicks may not mean relevance.,relevance_feedback
+What is RM3?,Query expansion via relevance modeling.,relevance_feedback
+What is pseudo relevance feedback?,Assume top-k docs are relevant.,relevance_feedback
+Why relevance feedback useful?,Improves query representation.,relevance_feedback
+What is blind feedback?,Feedback without user input.,relevance_feedback
+Why compress indexes?,Reduce storage and improve retrieval efficiency.,index_compression
+What is variable-byte encoding?,Encoding integers with continuation bits.,index_compression
+What is Elias-gamma coding?,Variable-length prefix code.,index_compression
+What is Elias-delta coding?,Gamma-coded length + offset.,index_compression
+What is Golomb coding?,Efficient for geometric distributions.,index_compression
+What is TAAT?,Term-at-a-time scoring.,index_compression
+What is DAAT?,Document-at-a-time scoring.,index_compression
+What are skip lists?,Pointers skipping ahead in postings.,index_compression
+What is BM25 conceptually?,A probabilistic term-based lexical model with TF saturation and document length normalization.,BM25
+What similarity does BM25 use?,Sum of per-term scores combining RSJ IDF weight and saturated TF.,BM25
+What is the RSJ weight?,IDF-like weight estimating discriminative power of rare terms.,BM25
+What is BM25 term-frequency saturation?,Diminishing returns for repeated terms to avoid over-weighting long docs.,BM25
+What does parameter b control?,Degree of document-length normalization.,BM25
+How does DPR represent queries/documents?,BERT encoders with CLS pooling for single-vector embedding.,DPR
+What similarity does DPR use?,Dot product between query and doc vectors.,DPR
+What loss does DPR use?,InfoNCE contrastive loss with positives and many negatives.,DPR
+What is DPR's key innovation?,Joint training of query/doc encoders using QA pairs and hard negatives.,DPR
+How does RepBERT represent text?,Mean pooling of token embeddings.,RepBERT
+What similarity does RepBERT use?,Inner product of mean-pooled vectors.,RepBERT
+What loss does RepBERT use?,Multi-label margin ranking loss.,RepBERT
+What is the innovation of RepBERT?,Effective dense retrieval using only mean pooling.,RepBERT
+What representation does ANCE use?,CLS embeddings like DPR.,ANCE
+What similarity does ANCE use?,Dot product.,ANCE
+What loss does ANCE use?,Same InfoNCE as DPR.,ANCE
+What is ANCE’s innovation?,ANN-based hard negative mining using model checkpoints.,ANCE
+How does Contriever represent text?,Mean-pooled embeddings trained with unsupervised contrastive learning.,Contriever
+What similarity does Contriever use?,Cosine similarity.,Contriever
+What is Contriever’s innovation?,Strong dense retrieval with only unsupervised contrastive training.,Contriever
+How does ColBERT represent text?,Multi-vector per-token embeddings.,ColBERT
+What similarity does ColBERT use?,Late interaction: MaxSim + sum.,ColBERT
+What is ColBERT’s innovation?,Token-level retrieval preserving expressiveness while allowing indexing.,ColBERT
+How do decoder LLM retrievers get embeddings?,Use hidden states (EOS/mean pooling) of decoder-only models.,Decoder-based
+How does E5 represent text?,EOS embedding from encoder-decoder transformer.,Decoder-based
+How does LLM2Vec represent text?,Mean pooling across all decoder token states.,Decoder-based
+What is RepLlama?,Dense retriever built from LLaMA decoder representations.,Decoder-based
+What type of model is TILDE?,Learned sparse retriever predicting lexical weights with BERT.,TILDE
+How does TILDE represent documents?,BERT to |V|-dimensional sparse lexical vector.,TILDE
+What similarity does TILDE use?,Inner product of sparse lexical vectors.,TILDE
+What loss does TILDE use?,Bi-directional query-document likelihood (BiQDL) loss.,TILDE
+What improves in TILDEv2?,Better document-side expansion and more efficient training.,TILDEv2
+What is SPLADE’s core idea?,MLM head predicts sparse term weights for retrieval.,SPLADE
+How does SPLADE enforce sparsity?,"L1, FLOPs regularization, and ReLU sparsification.",SPLADE
+What similarity does SPLADE use?,Sparse vector dot product.,SPLADE
+What changes from SPLADE to SPLADEv2?,"Max pooling, distillation, and document-side expansion focus.",SPLADEv2
+What does doc2query do?,Generates synthetic queries to expand documents.,doc2query
+How is doc2query trained?,Seq2seq on document–query pairs.,doc2query
+What is doc2query’s drawback?,Large expansion increases index size; may add noise.,doc2query
+What is PromptReps?,LLM prompting method to generate both dense and sparse representations.,PromptReps
+How does PromptReps create sparse/dense vectors?,Dense = last token embedding; Sparse = logits over vocabulary.,PromptReps
+What is the advantage of PromptReps?,Zero-shot representation learning using LLM prompts.,PromptReps
+What is balanced interleaving?,Combines rankings from two systems fairly to compare via user clicks.,OnlineEval
+How infer preferences from clicks?,Count clicks attributed to each system under unbiased interleaving.,OnlineEval
+What is DBGD?,Dueling Bandit Gradient Descent for online optimization.,OnlineEval
+What are problems with online eval?,"Position bias, exploration risk, user harm, slow convergence.",OnlineEval
+What is offline LTR?,"Train on labeled data using pointwise, pairwise, or listwise objectives.",LTR
+What is online LTR?,Use live user feedback to update ranking models.,LTR
+What is full-information evaluation?,Use explicit relevance labels for metrics.,LTR
+What is partial-information evaluation?,Use click data corrected for bias.,LTR
+When does BM25 beat dense models?,"Short keyword queries, rare-term matching, low-data settings.",Comparison
+When do dense models beat BM25?,"Semantic queries, paraphrases, high training data.",Comparison
+Advantages of learned sparse over dense?,"Use inverted indexes, interpretable weights, efficient retrieval.",Comparison
+When do dense and lexical models even out?,When overlap already good or domain structured.,Comparison
